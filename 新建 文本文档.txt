@@ -1,0 +1,314 @@
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git config --global user.name <"YRG">
+bash: syntax error near unexpected token `newline'
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git config --global user.email <"202200300050@mail.sdu.edu.cn">
+bash: syntax error near unexpected token `newline'
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git config --glabal --list
+error: unknown option `glabal'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git config --global --list
+fatal: unable to read config file 'C:/Users/19414/.gitconfig': No such file or directory
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git config --global user.name "YRG"
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git config --global user.email "202200300050@mail.sdu.edu.cn"
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git config --global --list
+user.name=YRG
+user.email=202200300050@mail.sdu.edu.cn
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git init
+Initialized empty Git repository in D:/git/.git/
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ ls -a
+./  ../  .git/
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ ls -al
+total 12
+drwxr-xr-x 1 19414 197609 0 Nov 20 16:26 ./
+drwxr-xr-x 1 19414 197609 0 Nov 20 16:15 ../
+drwxr-xr-x 1 19414 197609 0 Nov 20 16:26 .git/
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ ls -l
+total 0
+-rw-r--r-- 1 19414 197609 0 Nov 20 16:32 HelloWord.txt
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        HelloWord.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git a
+add        am         apply      archive    askpass    askyesno
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git a
+add        am         apply      archive    askpass    askyesno
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git a
+add        am         apply      archive    askpass    askyesno
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git add HelloWord.txt
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   HelloWord.txt
+
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git commit -m "t1"
+[master (root-commit) ed59747] t1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 HelloWord.txt
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git add HelloWord.txt
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   HelloWord.txt
+
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git commit -m "t2"
+[master 62a2663] t2
+ 1 file changed, 1 insertion(+)
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git reflog
+62a2663 (HEAD -> master) HEAD@{0}: commit: t2
+ed59747 HEAD@{1}: commit (initial): t1
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git reset^C
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ ^C
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git reset 62a2663
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git reset ed59747
+Unstaged changes after reset:
+M       HelloWord.txt
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   HelloWord.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git reflog
+ed59747 (HEAD -> master) HEAD@{0}: reset: moving to ed59747
+62a2663 HEAD@{1}: reset: moving to 62a2663
+62a2663 HEAD@{2}: commit: t2
+ed59747 (HEAD -> master) HEAD@{3}: commit (initial): t1
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ git rm HelloWord.txt
+error: the following file has local modifications:
+    HelloWord.txt
+(use --cached to keep the file, or -f to force removal)
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git (master)
+$ ^[[200~$
+bash: $'\E[200~$': command not found
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git clone https://gitlab.sduonline.cn/Cooper/first-git-job.git
+Cloning into 'first-git-job'...
+warning: missing OAuth configuration for gitlab.sduonline.cn - see https://aka.ms/gcm/gitlab for more information
+remote: HTTP Basic: Access denied
+fatal: Authentication failed for 'https://gitlab.sduonline.cn/Cooper/first-git-job.git/'
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git clone https://gitlab.sduonline.cn/Cooper/first-git-job.git
+Cloning into 'first-git-job'...
+warning: missing OAuth configuration for gitlab.sduonline.cn - see https://aka.ms/gcm/gitlab for more information
+remote: Enumerating objects: 159, done.
+remote: Counting objects: 100% (159/159), done.
+remote: Compressing objects: 100% (88/88), done.
+remote: Total 159 (delta 52), reused 128 (delta 40)
+Receiving objects: 100% (159/159), 18.00 KiB | 3.00 MiB/s, done.
+Resolving deltas: 100% (52/52), done.
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ git add
+fatal: not a git repository (or any of the parent directories): .git
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git
+$ cd first-git-job/
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (master)
+$ ls
+ LICENSE   README.md   后端-篠原春奈/  '移动 姚仁广'/   老年人俱乐部/
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "\347\247\273\345\212\250 \345\247\232\344\273\201\345\271\277/"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (master)
+$ git checkout -b 22 origin/22
+Switched to a new branch '22'
+branch '22' set up to track 'origin/22'.
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$ git add 移动 姚仁广
+fatal: pathspec '移动' did not match any files
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$ git add 移动_姚仁广
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$ git status
+On branch 22
+Your branch is up to date with 'origin/22'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "\347\247\273\345\212\250_\345\247\232\344\273\201\345\271\277/HelloWord.java"
+
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$ git commit -m "yrg"
+[22 b8fca47] yrg
+ 1 file changed, 5 insertions(+)
+ create mode 100644 "\347\247\273\345\212\250_\345\247\232\344\273\201\345\271\277/HelloWord.java"
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 414 bytes | 414.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote:
+remote: To create a merge request for 22, visit:
+remote:   https://gitlab.sduonline.cn/Cooper/first-git-job/merge_requests/new?merge_request%5Bsource_branch%5D=22
+remote:
+To https://gitlab.sduonline.cn/Cooper/first-git-job.git
+   f0f1065..b8fca47  22 -> 22
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$ git pull
+
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 13 (delta 5), reused 5 (delta 1)
+Unpacking objects: 100% (13/13), 1.26 KiB | 25.00 KiB/s, done.
+From https://gitlab.sduonline.cn/Cooper/first-git-job
+   b8fca47..05dfc2f  22         -> origin/22
+Updating b8fca47..05dfc2f
+Fast-forward
+ "\345\211\215\347\253\257-\345\274\240\350\216\253/HelloWorld.py"    | 1 +
+ .../HelloWorld.java"                                                 | 5 +++++
+ 2 files changed, 6 insertions(+)
+ create mode 100644 "\345\211\215\347\253\257-\345\274\240\350\216\253/HelloWorld.py"
+ create mode 100644 "\345\211\215\347\253\257-\351\273\204\345\251\211\345\247\227/HelloWorld.java"
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$
+
+19414@▒▒▒▒▒▒ MINGW64 /d/git/first-git-job (22)
+$
